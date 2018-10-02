@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        h1 {
+            color: brown;
+            text-align: center;
+
+        }
+
+        body {
+            background-color: lightcyan;
+        }
+
+        li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            letter-spacing: 3px;
+            text-emphasis: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Parts list</h1>
+
+    <ol>
+        {% for part in parts %}
+        <li><b> Distributor: </b> {{ part.distributor_name}} <b> SKU :</b> {{ part.sku}} <b> MOQ <b> :{{ part.moq}}</li>
+
+        {% endfor %}
+    </ol>
+    <h2>See some more stuff about <a href="/parts"> distributor</a> information</h2>
+
+</body>
+
+</html>
