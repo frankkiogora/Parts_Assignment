@@ -31,9 +31,6 @@ def parts(request):
             for price in prices:
                 price = price[1]
 
-            Part.objects.create(distributor_name='distributor', sku='sku', snippet='snippet',
-                                leads='leads', stock='stock', pkg='pkg', prices='price')
-
     return redirect('/parts')
 
 
