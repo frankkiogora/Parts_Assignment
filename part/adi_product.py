@@ -19,33 +19,30 @@ c.writerow(columns)
 for result in r['results']:
     manufacturer = result['item']['manufacturer']['name']
     mpn = result['item']['mpn']
+    # item one
+    item_one_pins = r['results'][0]['snippet'].split()[3]
+    c.writerow([manufacturer, mpn, item_one_pins, 'price', 'unavailable'])
 
 # item one
-manufacturer = manufacturer
 mpn = mpn
-item_one_pins = r['results'][0]['snippet'].split()[3]
-c.writerow([manufacturer, mpn, item_one_pins, 'price', 'unavailable'])
-
 
 # item two
 item_two_pins = r['results'][1]['snippet'].split()[3]
-
 c.writerow([manufacturer, mpn, item_two_pins, 'Price', 'unavailable'])
 
-
 # item three
-# ==========================================
+
 item_three_pins = 'none'
-c.writerow([manufacturer, mpn, item_three_pins, 'unavailable', 'unavailable'])
+c.writerow([manufacturer, mpn, item_three_pins,
+            'unavailable', 'unavailable'])
 
 # item four
-# ==========================================
+
 item_four_pins = 'none'
 c.writerow([manufacturer, mpn, item_four_pins, 'unavailable', 'Frequency'])
 
-
 # currency and dollar_amount extraction
-# ==========================================
+
 
 for result in r['results']:
     offers = result['item']['offers']
@@ -57,4 +54,4 @@ for result in r['results']:
         currency = k
         # print currency
         dollar_amount = dollar_amount
-        print dollar_amount
+        # print dollar_amount
