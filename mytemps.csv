@@ -1,8 +1,5 @@
-Distributor,mpn,Pins,Price,Frequency
-Analog Devices,AD9361BBCZ,144-Pin,price,unavailable
-Analog Devices,AD9361BBCZ-REEL,144-Pin,price,unavailable
-Analog Devices,AD9361/PCBZ,144-Pin,price,unavailable
-Analog Devices,AD9361XBCZ,144-Pin,price,unavailable
-Analog Devices,AD9361XBCZ,144-Pin,Price,unavailable
+Distributor,mpn,Pins,Price,Frequency,Interface
+Analog Devices,AD9361XBCZ,144-Pin,price,70MHz,SPI
+Analog Devices,AD9361XBCZ,144-Pin,Price,70MHz,SPI
 Analog Devices,AD9361XBCZ,none,unavailable,unavailable
 Analog Devices,AD9361XBCZ,none,unavailable,Frequency

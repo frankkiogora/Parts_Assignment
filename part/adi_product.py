@@ -12,29 +12,29 @@ r = requests.get(url).json()
 # print '*******  FIRST_RESULT_ITEM  ********  ', r['results'][0]['item']
 
 c = csv.writer(open('mytemps.csv', 'w'))
-columns = ['Distributor', 'mpn', 'Pins', 'Price', 'Frequency']
+columns = ['Distributor', 'mpn', 'Pins', 'Price', 'Frequency', 'Interface']
 c.writerow(columns)
 
 
 for result in r['results']:
     manufacturer = result['item']['manufacturer']['name']
     mpn = result['item']['mpn']
-    # item one
-    item_one_pins = r['results'][0]['snippet'].split()[3]
-    c.writerow([manufacturer, mpn, item_one_pins, 'price', 'unavailable'])
-
-# item one
+manufacturer = manufacturer
 mpn = mpn
+# item one
+item_one_pins = r['results'][0]['snippet'].split()[3]
+mpn = mpn
+c.writerow([manufacturer, mpn, item_one_pins, 'price', '70MHz', 'SPI'])
+
 
 # item two
 item_two_pins = r['results'][1]['snippet'].split()[3]
-c.writerow([manufacturer, mpn, item_two_pins, 'Price', 'unavailable'])
+c.writerow([manufacturer, mpn, item_two_pins, 'Price', '70MHz', 'SPI'])
 
 # item three
 
 item_three_pins = 'none'
-c.writerow([manufacturer, mpn, item_three_pins,
-            'unavailable', 'unavailable'])
+c.writerow([manufacturer, mpn, item_three_pins, 'unavailable', 'unavailable'])
 
 # item four
 
