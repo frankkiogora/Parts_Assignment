@@ -5,5 +5,5 @@ Words of appreciation: I a Personally appreciate this apportunity and more so th
 
 Finally: I will strive to make sure Parts_asignment has all the features requested and much more.
 
-I have identified issues with my the data that I need some more time to fix. i.e duplicate data in my csv file
-I am aware that One hot encoding feature is missing. It is something new to me but with some more time I can do it
+I have identified issues with the data that I need some more time to fix. i.e duplicate data in my csv file
+I am aware that "One hot encoding feature" is missing. It is something new to me but with some more time I can do it
