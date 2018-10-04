@@ -1,6 +1,8 @@
 import requests
 import json
 import csv
+import pandas
+import numpy as np
 
 
 api_key = '8c0bb92a'
@@ -55,5 +57,9 @@ for result in results:
 
 
 #  ++ private notes ++
+<<<<<<< HEAD
 # fix the code to avoid printing 4 times. I suspect the reapeting lines has to fo with the url, need more time to analyse and fix
+=======
+# fix the code to avoid printing 4 times.I suspect the repaeting data is from the url. need more time to analyse and fix it
+>>>>>>> 14cad9c326f1688f0f8922205c2acdc5a2a74cc9
 # Study and finish 'one hot encoding
