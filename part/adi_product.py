@@ -18,7 +18,7 @@ c = csv.writer(open('mytemps.csv', 'w'))
 # ==========    Headers   ===============
 
 c.writerow(['MANUFACTURER', 'SNIPPET', 'MPN',
-            'NO.PINS', 'FREQUENCY', 'PACKAGING'])
+            'NO.PINS', 'FREQUENCY', 'PACKAGING', 'RANGE'])
 
 
 for result in results:
@@ -35,22 +35,23 @@ for result in results:
     item1_pkg = item1['specs']['packaging']['display_value']
 
     c.writerow([manufacturer, snippet, mpn,
-                item1_pin, item1_freq, item1_pkg])
+                item1_pin, item1_freq, item1_pkg, ''])
 
     # ==========    item two  ================
     item2 = results[1]['item']
     item2_pin_count = item2['specs']['pin_count']['display_value']
     item2_pkg = item2['specs']['packaging']['display_value']
 
-    c.writerow([manufacturer, snippet, mpn, item2_pin_count, '', item2_pkg])
+    c.writerow([manufacturer, snippet, mpn,
+                item2_pin_count, '', item2_pkg, ''])
 
     # ==========    item three  ================
 
-    c.writerow([manufacturer, snippet, mpn, '', '', ''])
+    c.writerow([manufacturer, snippet, mpn, '', '', '', ''])
 
     # ==========    item four  ================
 
-    c.writerow([manufacturer, snippet, mpn, '', '', ''])
+    c.writerow([manufacturer, snippet, mpn, '', '', '', ''])
 
 
 #  ++ private notes ++
