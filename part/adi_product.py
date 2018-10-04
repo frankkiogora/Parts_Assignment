@@ -1,6 +1,9 @@
 import requests
 import json
 import csv
+from sklearn import preprocessing
+import pandas
+import numpy as np
 
 api_key = '8c0bb92a'
 
