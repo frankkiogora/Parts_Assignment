@@ -1,6 +1,7 @@
 import requests
 import json
 import csv
+import pandas
 
 api_key = '8c0bb92a'
 
