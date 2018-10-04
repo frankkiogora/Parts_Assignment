@@ -53,5 +53,5 @@ for result in results:
 
 
 #  ++ private notes ++
-# fix the code to avoid printing 4 times
+# fix the code to avoid printing 4 times.I suspect the repaeting data is from the url. need more time to analyse and fix it
 # Study and finish 'one hot encoding
