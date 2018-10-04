@@ -2,6 +2,7 @@ import requests
 import json
 import csv
 import pandas
+import numpy as np
 
 api_key = '8c0bb92a'
 
