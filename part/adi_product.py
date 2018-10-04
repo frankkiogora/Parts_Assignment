@@ -1,9 +1,7 @@
 import requests
 import json
 import csv
-from sklearn import preprocessing
-import pandas
-import numpy as np
+
 
 api_key = '8c0bb92a'
 
@@ -56,5 +54,5 @@ for result in results:
 
 
 #  ++ private notes ++
-# fix the code to avoid printing 4 times
+# fix the code to avoid printing 4 times. I suspect the reapeting lines has to fo with the url, need more time to analyse and fix
 # Study and finish 'one hot encoding
