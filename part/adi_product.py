@@ -4,54 +4,55 @@ import csv
 
 api_key = '8c0bb92a'
 
-url = 'https://octopart.com/api/v3/parts/search?apikey=8c0bb92a&q=AD9361*&pretty_print=true'
+url = 'https://octopart.com/api/v3/parts/search?apikey=8c0bb92a&q=AD9361*&include[]=specs&sort=specs2.15.numbers&sort-dir=asc&start=0&pretty_print=true'
 r = requests.get(url).json()
-# print '*******  RESULTS_LENGTH ********  ', len(r['results'])
-# print '*******  FIRST_RESULT  ********  ', r['results'][0]
-# print '*******  FIRST_RESULT_RESULT_KEYS  ********  ', r['results'][0].keys()# snippet, item , class
-# print '*******  FIRST_RESULT_ITEM  ********  ', r['results'][0]['item']
+
+results = r['results']
+item_one_manufacturer = results[0]['item']['manufacturer']['name']
+
+# csv file setup
 
 c = csv.writer(open('mytemps.csv', 'w'))
-columns = ['Distributor', 'mpn', 'Pins', 'Price', 'Frequency', 'Interface']
-c.writerow(columns)
+
+# ==========    Headers   ===============
+
+c.writerow(['MANUFACTURER', 'SNIPPET', 'MPN',
+            'NO.PINS', 'FREQUENCY', 'PACKAGING'])
 
 
-for result in r['results']:
-    manufacturer = result['item']['manufacturer']['name']
-    mpn = result['item']['mpn']
-manufacturer = manufacturer
-mpn = mpn
-# item one
-item_one_pins = r['results'][0]['snippet'].split()[3]
-mpn = mpn
-c.writerow([manufacturer, mpn, item_one_pins, 'price', '70MHz', 'SPI'])
+for result in results:
+    part = result['item']
+    manufacturer = part['manufacturer']['name']
+    mpn = part['mpn']
+    snippet = result['snippet']
+
+    # ==========    item two  ================
+    item1 = results[0]['item']
+
+    item1_pin = item1['specs']['pin_count']['display_value']
+    item1_freq = item1['specs']['frequency']['display_value']
+    item1_pkg = item1['specs']['packaging']['display_value']
+
+    c.writerow([manufacturer, snippet, mpn,
+                item1_pin, item1_freq, item1_pkg])
+
+    # ==========    item two  ================
+    item2 = results[1]['item']
+    item2_pin_count = item2['specs']['pin_count']['display_value']
+    item2_pkg = item2['specs']['packaging']['display_value']
+
+    c.writerow([manufacturer, snippet, mpn,
+                item2_pin_count,  item2_pkg])
+
+    # ==========    item three  ================
+
+    c.writerow([manufacturer, snippet, mpn])
+
+    # ==========    item four  ================
+
+    c.writerow([manufacturer, snippet, mpn])
 
 
-# item two
-item_two_pins = r['results'][1]['snippet'].split()[3]
-c.writerow([manufacturer, mpn, item_two_pins, 'Price', '70MHz', 'SPI'])
-
-# item three
-
-item_three_pins = 'none'
-c.writerow([manufacturer, mpn, item_three_pins, 'unavailable', 'unavailable'])
-
-# item four
-
-item_four_pins = 'none'
-c.writerow([manufacturer, mpn, item_four_pins, 'unavailable', 'Frequency'])
-
-# currency and dollar_amount extraction
-
-
-for result in r['results']:
-    offers = result['item']['offers']
-    for offer in offers:
-        for k, v in offer['prices'].iteritems():
-            currency = k
-            # print '****  currency  ****', currency
-            dollar_amount = float(v[0][1])
-        currency = k
-        # print currency
-        dollar_amount = dollar_amount
-        # print dollar_amount
+#  ++ private notes ++
+# fix the code to avoid printing 4 times
+# Study and finish 'one hot encoding

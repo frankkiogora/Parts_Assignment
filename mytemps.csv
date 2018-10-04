@@ -1,5 +1,17 @@
-Distributor,mpn,Pins,Price,Frequency,Interface
-Analog Devices,AD9361XBCZ,144-Pin,price,70MHz,SPI
-Analog Devices,AD9361XBCZ,144-Pin,Price,70MHz,SPI
-Analog Devices,AD9361XBCZ,none,unavailable,unavailable
-Analog Devices,AD9361XBCZ,none,unavailable,Frequency
+MANUFACTURER,SNIPPET,MPN,NO.PINS,FREQUENCY,PACKAGING
+Analog Devices,RF Transceiver 1.3V 144-Pin CSP-BGA Tray,AD9361BBCZ,144,6.00 GHz (max),Tray
+Analog Devices,RF Transceiver 1.3V 144-Pin CSP-BGA Tray,AD9361BBCZ,144,Reel
+Analog Devices,RF Transceiver 1.3V 144-Pin CSP-BGA Tray,AD9361BBCZ
+Analog Devices,RF Transceiver 1.3V 144-Pin CSP-BGA Tray,AD9361BBCZ
+Analog Devices,RF Transceiver 1.3V 144-Pin CSP-BGA T/R,AD9361BBCZ-REEL,144,6.00 GHz (max),Tray
+Analog Devices,RF Transceiver 1.3V 144-Pin CSP-BGA T/R,AD9361BBCZ-REEL,144,Reel
+Analog Devices,RF Transceiver 1.3V 144-Pin CSP-BGA T/R,AD9361BBCZ-REEL
+Analog Devices,RF Transceiver 1.3V 144-Pin CSP-BGA T/R,AD9361BBCZ-REEL
+Analog Devices,"Single-Chip, Multiband 3G Femtocell Transceiver",AD9361/PCBZ,144,6.00 GHz (max),Tray
+Analog Devices,"Single-Chip, Multiband 3G Femtocell Transceiver",AD9361/PCBZ,144,Reel
+Analog Devices,"Single-Chip, Multiband 3G Femtocell Transceiver",AD9361/PCBZ
+Analog Devices,"Single-Chip, Multiband 3G Femtocell Transceiver",AD9361/PCBZ
+Analog Devices,"Single-Chip, Multiband 3G Femtocell Transceiver",AD9361XBCZ,144,6.00 GHz (max),Tray
+Analog Devices,"Single-Chip, Multiband 3G Femtocell Transceiver",AD9361XBCZ,144,Reel
+Analog Devices,"Single-Chip, Multiband 3G Femtocell Transceiver",AD9361XBCZ
+Analog Devices,"Single-Chip, Multiband 3G Femtocell Transceiver",AD9361XBCZ
