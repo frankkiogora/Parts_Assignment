@@ -41,16 +41,15 @@ for result in results:
     item2_pin_count = item2['specs']['pin_count']['display_value']
     item2_pkg = item2['specs']['packaging']['display_value']
 
-    c.writerow([manufacturer, snippet, mpn,
-                item2_pin_count,  item2_pkg])
+    c.writerow([manufacturer, snippet, mpn, item2_pin_count, '', item2_pkg])
 
     # ==========    item three  ================
 
-    c.writerow([manufacturer, snippet, mpn])
+    c.writerow([manufacturer, snippet, mpn, '', '', ''])
 
     # ==========    item four  ================
 
-    c.writerow([manufacturer, snippet, mpn])
+    c.writerow([manufacturer, snippet, mpn, '', '', ''])
 
 
 #  ++ private notes ++
